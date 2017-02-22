@@ -1,4 +1,6 @@
 # Angular2WorldEvents
+This is a simple app that uses various angular2 components like material, and firebase. Its main functionality is to add events to a realtime firebase and read the events from the same database.
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
