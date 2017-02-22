@@ -1,0 +1,6 @@
+<table>
+  <tr><th>Description</th><th>Name</th><th>Location</th><th>Start Date</th></tr>
+  <tr class="text" *ngFor="let event of events | async">
+    <td>{{event["description"]}}</td><td> {{event["name"]}}</td> <td>{{event["location"]}}</td> <td>{{event["startdate"]}}</td>
+  </tr>
+</table>
