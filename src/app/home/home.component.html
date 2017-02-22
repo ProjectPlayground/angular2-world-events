@@ -1,6 +1,23 @@
-<table>
-  <tr><th>Description</th><th>Name</th><th>Location</th><th>Start Date</th></tr>
-  <tr class="text" *ngFor="let event of events | async">
-    <td>{{event["description"]}}</td><td> {{event["name"]}}</td> <td>{{event["location"]}}</td> <td>{{event["startdate"]}}</td>
-  </tr>
-</table>
+<md-sidenav-container [class.app-dark]="isDarkTheme">
+  <div class="app-content">
+    <md-card>
+      <md-list class="app-list">
+        <md-list-item *ngFor="let event of events | async">
+          <h3 md-line>
+            Name: {{event["name"]}}, Start Date: {{event["startdate"]}}
+          </h3>
+
+          <p md-line class="demo-secondary-text">Description: {{event["description"]}} Location: {{event["location"]}}</p>
+        </md-list-item>
+      </md-list>
+    </md-card>
+  </div>
+</md-sidenav-container>
+
+
+
+<span class="app-action">
+  <button md-fab>
+    <md-icon>check plus</md-icon>
+  </button>
+</span>
